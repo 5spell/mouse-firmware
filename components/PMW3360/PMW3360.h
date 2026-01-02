@@ -1,0 +1,143 @@
+#ifndef PMW3360_LIB
+#define PMW3360_LIB
+
+#pragma once
+
+#include <stdint.h>
+#include <stdbool.h>
+
+#include "driver/spi_master.h"
+#include "driver/gpio.h"
+
+// Registers
+#define REG_Product_ID  0x00
+#define REG_Revision_ID 0x01
+#define REG_Motion  0x02
+#define REG_Delta_X_L 0x03
+#define REG_Delta_X_H 0x04
+#define REG_Delta_Y_L 0x05
+#define REG_Delta_Y_H 0x06
+#define REG_SQUAL 0x07
+#define REG_Raw_Data_Sum  0x08
+#define REG_Maximum_Raw_data  0x09
+#define REG_Minimum_Raw_data  0x0A
+#define REG_Shutter_Lower 0x0B
+#define REG_Shutter_Upper 0x0C
+#define REG_Control 0x0D
+#define REG_Config1 0x0F
+#define REG_Config2 0x10
+#define REG_Angle_Tune  0x11
+#define REG_Frame_Capture 0x12
+#define REG_SROM_Enable 0x13
+#define REG_Run_Downshift 0x14
+#define REG_Rest1_Rate_Lower  0x15
+#define REG_Rest1_Rate_Upper  0x16
+#define REG_Rest1_Downshift 0x17
+#define REG_Rest2_Rate_Lower  0x18
+#define REG_Rest2_Rate_Upper  0x19
+#define REG_Rest2_Downshift 0x1A
+#define REG_Rest3_Rate_Lower  0x1B
+#define REG_Rest3_Rate_Upper  0x1C
+#define REG_Observation 0x24
+#define REG_Data_Out_Lower  0x25
+#define REG_Data_Out_Upper  0x26
+#define REG_Raw_Data_Dump 0x29
+#define REG_SROM_ID 0x2A
+#define REG_Min_SQ_Run  0x2B
+#define REG_Raw_Data_Threshold  0x2C
+#define REG_Config5 0x2F
+#define REG_Power_Up_Reset  0x3A
+#define REG_Shutdown  0x3B
+#define REG_Inverse_Product_ID  0x3F
+#define REG_LiftCutoff_Tune3  0x41
+#define REG_Angle_Snap  0x42
+#define REG_LiftCutoff_Tune1  0x4A
+#define REG_Motion_Burst  0x50
+#define REG_LiftCutoff_Tune_Timeout 0x58
+#define REG_LiftCutoff_Tune_Min_Length  0x5A
+#define REG_SROM_Load_Burst 0x62
+#define REG_Lift_Config 0x63
+#define REG_Raw_Data_Burst  0x64
+#define REG_LiftCutoff_Tune2  0x65
+
+/*
+Raw burst data structure: 
+  uint8_t[00] = Motion    = if the 7th bit is 1, a motion is detected.
+         ==> 7 bit: MOT (1 when motion is detected)
+         ==> 3 bit: 0 when chip is on surface / 1 when off surface
+  uint8_t[01] = Observation  
+  uint8_t[02] = Delta_X_L = dx (LSB)
+  uint8_t[03] = Delta_X_H = dx (MSB) 
+  uint8_t[04] = Delta_Y_L = dy (LSB)
+  uint8_t[05] = Delta_Y_H = dy (MSB)
+  uint8_t[06] = SQUAL     = Surface Quality register, max 0x80
+                       - Number of features on the surface = SQUAL * 8
+  uint8_t[07] = Raw_Data_Sum   = It reports the upper uint8_t of an 18‐bit counter which sums all 1296 raw data in the current frame;
+                             * Avg value = Raw_Data_Sum * 1024 / 1296
+  uint8_t[08] = Maximum_Raw_Data  = Max raw data value in current frame, max=127
+  uint8_t[09] = Minimum_Raw_Data  = Min raw data value in current frame, max=127
+  uint8_t[10] = Shutter_Upper     = Shutter LSB
+  uint8_t[11] = Shutter_Lower     = Shutter MSB, Shutter = shutter is adjusted to keep the average raw data values within normal operating ranges
+
+Struct description
+- PMW3360_DATA.isMotion      : bool, True if a motion is detected. 
+- PMW3360_DATA.isOnSurface   : bool, True when a chip is on a surface 
+- PMW3360_DATA.dx, data.dy   : integer, displacement on x/y directions.
+- PMW3360_DATA.SQUAL         : uint8_t, Surface Quality register, max 0x80
+                       * Number of features on the surface = SQUAL * 8
+- PMW3360_DATA.rawDataSum    : uint8_t, It reports the upper uint8_t of an 18‐bit counter 
+                       which sums all 1296 raw data in the current frame;
+                       * Avg value = Raw_Data_Sum * 1024 / 1296
+- PMW3360_DATA.maxRawData    : uint8_t, Max/Min raw data value in current frame, max=127
+  PMW3360_DATA.minRawData
+- PMW3360_DATA.shutter       : unsigned int, shutter is adjusted to keep the average
+                       raw data values within normal operating ranges.
+*/
+struct PMW3360_DATA {
+ bool isMotion;        // True if a motion is detected. 
+ bool isOnSurface;     // True when a chip is on a surface 
+ int16_t dx;               // displacement on x directions. Unit: Count. (CPI * Count = Inch value)
+ int16_t dy;               // displacement on y directions.
+ uint8_t SQUAL;           // Surface Quality register, max 0x80. Number of features on the surface = SQUAL * 8
+ uint8_t rawDataSum;      // It reports the upper uint8_t of an 18‐bit counter which sums all 1296 raw data in the current frame; * Avg value = Raw_Data_Sum * 1024 / 1296
+ uint8_t maxRawData;      // Max raw data value in current frame, max=127
+ uint8_t minRawData;      // Min raw data value in current frame, max=127
+ unsigned int shutter; // unit: clock cycles of the internal oscillator. shutter is adjusted to keep the average raw data values within normal operating ranges.
+}; 
+
+class PMW3360 {
+public:
+  PMW3360(spi_host_device_t spi_host, gpio_num_t cs);  // set CPI to 800 by default.
+  // begin: initialize the module, CPI: initial Count Per Inch
+  esp_err_t begin(unsigned int CPI = 800);    
+  // setCPI: set CPI
+  void setCPI(unsigned int newCPI);
+  // setCPI: get CPI value (it does read CPI register from the module)
+  unsigned int getCPI();
+  PMW3360_DATA readBurst();
+  uint8_t readReg(uint8_t reg_addr);
+  void writeReg(uint8_t reg_addr, uint8_t data);
+  void prepareImage();
+  uint8_t readImagePixel();
+  void endImage();
+
+private:
+  spi_host_device_t spi_host;
+  spi_device_handle_t spi_handle;
+  gpio_num_t cs;
+
+  bool inBurst = false;
+  unsigned long lastBurst = 0;
+
+  void cs_high();
+  void cs_low();
+  uint8_t spi_transfer(uint8_t data);
+
+  uint8_t adns_read_reg(uint8_t reg_addr);
+  void adns_write_reg(uint8_t reg_addr, uint8_t data);
+  void adns_upload_firmware();
+  bool check_signature();  
+};
+//extern AdvMouse_ AdvMouse;
+
+#endif
