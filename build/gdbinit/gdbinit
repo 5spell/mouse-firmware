@@ -1,2 +1,2 @@
-source C:/Users/bogda/Documents/mouse-firm/build/gdbinit/symbols
-source C:/Users/bogda/Documents/mouse-firm/build/gdbinit/connect
+source /home/spell/Nuclear-launch-codes/mouse-firmware/build/gdbinit/symbols
+source /home/spell/Nuclear-launch-codes/mouse-firmware/build/gdbinit/connect

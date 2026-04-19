@@ -1,2 +1,10 @@
 CompileFlags:
-    Remove: [-f*, -m*]
+  Add:
+    - --sysroot=/home/spell/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/xtensa-esp-elf
+  Remove:
+    - -fno-tree-switch-conversion
+    - -fno-jump-tables
+    - -fstrict-volatile-bitfields
+    - -fmacro-prefix-map=*
+    - -mtext-section-literals
+CompilationDatabase: build/

@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/bogda/esp/v5.5.1/esp-idf
+# Install script for directory: /opt/esp-idf
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/mouse-firm")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,251 +34,352 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/bogda/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump.exe")
+  set(CMAKE_OBJDUMP "/home/spell/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/xtensa/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/xtensa/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/mbedtls/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_stdio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/bootloader/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_dma/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esptool_py/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_gpspi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/partition_table/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_clock/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_app_format/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_mspi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_bootloader_format/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_blockdev/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/app_update/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_security/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_partition/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/bootloader/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/efuse/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esptool_py/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/bootloader_support/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/partition_table/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_mm/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_app_format/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_driver_gpio/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_bootloader_format/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/spi_flash/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/app_update/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_timer/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_partition/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_system/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/efuse/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_common/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_timg/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_rom/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_timer/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/hal/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_security/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/log/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_mm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/heap/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_driver_dma/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/soc/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/mbedtls/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_security/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_wdt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_hw_support/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_uart/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/freertos/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_ana_conv/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/newlib/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_rtc_timer/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/pthread/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/bootloader_support/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/cxx/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_driver_gpio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_pm/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/spi_flash/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_driver_spi/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_usb_cdc_rom_console/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/PMW3360/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_system/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_event/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_common/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_ringbuf/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_rom/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_driver_uart/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/hal/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_driver_usb_serial_jtag/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/log/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_vfs_console/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/heap/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/vfs/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/soc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/lwip/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_gpio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_netif_stack/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_usb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_netif/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_pmu/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/espressif__tinyusb/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_touch_sens/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/wear_levelling/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hal_i2s/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/sdmmc/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_hw_support/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_driver_sdmmc/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/freertos/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/esp_driver_sdspi/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_libc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/fatfs/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/pthread/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/usb/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/cxx/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/espressif__esp_tinyusb/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_pm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/bogda/Documents/mouse-firm/build/esp-idf/main/cmake_install.cmake")
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_psram/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_driver_spi/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/PMW3360/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_event/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_ringbuf/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_driver_uart/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_driver_usb_serial_jtag/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/vfs/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/lwip/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_netif_stack/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_netif/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/espressif__tinyusb/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/wear_levelling/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/sdmmc/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_driver_sd_intf/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_driver_sdmmc/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/esp_driver_sdspi/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/fatfs/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/espressif__esp_tinyusb/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/main/cmake_install.cmake")
+endif()
+
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+if(CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "/home/spell/Nuclear-launch-codes/mouse-firmware/build/esp-idf/install_local_manifest.txt"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()

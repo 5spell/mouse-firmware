@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-C:/Users/bogda/Documents/mouse-firm/build/CMakeFiles/bootloader
-C:/Users/bogda/Documents/mouse-firm/build/CMakeFiles/bootloader.rule
-C:/Users/bogda/Documents/mouse-firm/build/CMakeFiles/bootloader-complete.rule
-C:/Users/bogda/Documents/mouse-firm/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-C:/Users/bogda/Documents/mouse-firm/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-C:/Users/bogda/Documents/mouse-firm/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-C:/Users/bogda/Documents/mouse-firm/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-C:/Users/bogda/Documents/mouse-firm/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-C:/Users/bogda/Documents/mouse-firm/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-C:/Users/bogda/Documents/mouse-firm/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/home/spell/Nuclear-launch-codes/mouse-firmware/build/CMakeFiles/bootloader
+/home/spell/Nuclear-launch-codes/mouse-firmware/build/CMakeFiles/bootloader.rule
+/home/spell/Nuclear-launch-codes/mouse-firmware/build/CMakeFiles/bootloader-complete.rule
+/home/spell/Nuclear-launch-codes/mouse-firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/spell/Nuclear-launch-codes/mouse-firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/spell/Nuclear-launch-codes/mouse-firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/spell/Nuclear-launch-codes/mouse-firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/spell/Nuclear-launch-codes/mouse-firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/spell/Nuclear-launch-codes/mouse-firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/spell/Nuclear-launch-codes/mouse-firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
