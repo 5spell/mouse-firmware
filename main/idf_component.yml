@@ -14,4 +14,5 @@ dependencies:
   #   # `public` flag doesn't have an effect dependencies of the `main` component.
   #   # All dependencies of `main` are public by default.
   #   public: true
-  espressif/esp_tinyusb: ~2.0.0
+  # esp_tinyusb 1.x is the IDF-5.x line; 2.x targets IDF 6+.
+  espressif/esp_tinyusb: ">=1.0.0,<2.0.0"
