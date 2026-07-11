@@ -5,7 +5,8 @@ CONFIG_TINYUSB_CDC_COUNT=2
 CONFIG_TINYUSB_HID_COUNT=0
 
 # Disable watchdogs, they'd get triggered during unity interactive menu
-# CONFIG_ESP_TASK_WDT_INIT is not set
+CONFIG_ESP_INT_WDT=n
+CONFIG_ESP_TASK_WDT=n
 
 # Run-time checks of Heap and Stack
 CONFIG_HEAP_POISONING_COMPREHENSIVE=y

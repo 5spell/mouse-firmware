@@ -410,7 +410,7 @@ esp_err_t PMW3360::begin(unsigned int CPI) {
 
   adns_write_reg(REG_Shutdown, 0xb6); // Shutdown first
 
-  vTaskDelay(300);
+  vTaskDelay(pdMS_TO_TICKS(300));
 
   BEGIN_COM;
   esp_rom_delay_us(40);
@@ -419,7 +419,7 @@ esp_err_t PMW3360::begin(unsigned int CPI) {
 
   adns_write_reg(REG_Power_Up_Reset, 0x5a); // force reset
 
-  vTaskDelay(50); // wait for it to reboot
+  vTaskDelay(pdMS_TO_TICKS(50)); // wait for it to reboot
 
   // read registers 0x02 to 0x06 (and discard the data)
   adns_read_reg(REG_Motion);
@@ -430,7 +430,7 @@ esp_err_t PMW3360::begin(unsigned int CPI) {
   // upload the firmware
   adns_upload_firmware();
 
-  vTaskDelay(10);
+  vTaskDelay(pdMS_TO_TICKS(10));
   setCPI(CPI);
 
   if (check_signature()) {
@@ -616,8 +616,8 @@ void PMW3360::adns_upload_firmware() {
   adns_write_reg(REG_SROM_Enable, 0x1d);
 
   // wait for more than one frame period
-  vTaskDelay(10); // assume that the frame rate is as low as 100fps... even if
-                  // it should never be that low
+  vTaskDelay(pdMS_TO_TICKS(10)); // assume that the frame rate is as low as 100fps... even if
+                                 // it should never be that low
 
   // write 0x18 to SROM_enable to start SROM download
   adns_write_reg(REG_SROM_Enable, 0x18);
@@ -670,7 +670,7 @@ void PMW3360::prepareImage() {
   adns_write_reg(REG_Frame_Capture, 0x83);
   adns_write_reg(REG_Frame_Capture, 0xc5);
 
-  vTaskDelay(20);
+  vTaskDelay(pdMS_TO_TICKS(20));
 
   BEGIN_COM;
   spi_transfer(REG_Raw_Data_Burst & 0x7f);
