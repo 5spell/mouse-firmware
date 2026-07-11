@@ -7,4 +7,4 @@ CompileFlags:
     - -fstrict-volatile-bitfields
     - -fmacro-prefix-map=*
     - -mtext-section-literals
-CompilationDatabase: build/
+CompilationDatabase: build

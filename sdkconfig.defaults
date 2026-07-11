@@ -2,9 +2,11 @@
 # get boot logs before TinyUSB takes the OTG peripheral).
 CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
 
-# Bare-minimum TinyUSB config: CDC only. No HID for the bring-up test.
 CONFIG_TINYUSB_CDC_ENABLED=y
 CONFIG_TINYUSB_CDC_COUNT=1
+CONFIG_TINYUSB_HID_COUNT=1
+
+CONFIG_FREERTOS_HZ=1000
 
 # Watchdog: keep enabled so we panic+reboot on hang instead of hanging forever.
 CONFIG_ESP_TASK_WDT_EN=y
